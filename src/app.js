@@ -14,6 +14,6 @@ app.use(bodyParser.json());
 
 routes(app);
 
-app.listen(env.Api_port, () => {
-    console.log(`Api listening on port ${env.Api_port}!`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Api listening on port ${process.env.PORT || 3000}!`);
 });
